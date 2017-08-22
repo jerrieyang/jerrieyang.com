@@ -22,7 +22,10 @@ export const fadeInOut: AnimationTriggerMetadata =  trigger('fadeInOut', [
 ]);
 
 export const fadeIn: AnimationTriggerMetadata =  trigger('fadeIn', [
-  state('*', style({ 'opacity': 1, transform: 'translateY(0)'})),
-  state('void', style({ 'opacity': 0,  transform: 'translateY(10px)' })),
+  state('*', style({ 'opacity': 1})),
+  state('void', style({ 'opacity': 0 })),
   transition('void => *', animate(300))
 ]);
+//, transform: 'translateY(0)
+//,  transform: 'translateY(10px)'
+

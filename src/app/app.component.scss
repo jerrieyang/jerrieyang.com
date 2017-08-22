@@ -17,9 +17,9 @@
 
 .background {
   position: absolute;
-  left: 120px;
+  left: 100px;
   z-index: 0;
-  width: 280px;
+  width: 300px;
 
   &.One { stroke-dasharray: 510; animation: longwrite1 2.6s linear; }
   &.Two {  stroke-dasharray: 600;  animation: longwrite2 2.6s linear; }

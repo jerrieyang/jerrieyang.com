@@ -4,12 +4,16 @@
 @import url('https://fonts.googleapis.com/css?family=Delius');
 
 $noteWidth: 500px;
-
+html, body{
+  min-height: 100%;
+}
 body{
-  background: #333333;
   font-family: 'Delius', cursive;
   font-size: 16px;
+  background-color: rgba(25,25,25,1);
+  @include background-image(linear-gradient(top, rgba(102,102,102,1) 0%, rgba(25,25,25,1) 100%));
 }
+
 
 .note{
   background-color: #f7f7f7;
@@ -35,40 +39,26 @@ body{
 
   &--recruiters{
     position: absolute;
-    width: 220px;
-    background: url('./assets/images/postit-2-alternative.png') no-repeat top left;
-    top: 460px;
-    left: 0;
-    height: 220px;
+    width: 280px;
+    background: url('./assets/images/sticky-note.png') no-repeat top left;
+    top: 470px;
+    left: 50%;
+    height: 280px;
     text-align: left;
-    padding: 40px 60px;
+    padding: 40px 30px;
+
+    .content{
+      transform: rotate(-8deg);
+    }
   }
+
+
   &--friends{
-    width: $noteWidth;
+    width: 960px;
+    height: 600px;
+    margin: -260px auto 0;
+    background: url('./assets/images/blank-photo-frames-2023679_960_720.png') no-repeat top left;
   }
 
 
-
-
-  //@include background-image(linear-gradient(top, rgba(68,68,68,1) 0%,rgba(85,85,85,1) 27%,rgba(85,85,85,1) 100%));
-}
-
-body, a{
-  //color: #173a61;
-}
-
-.main{
-  //max-width: 400px;
-  //margin: auto;
-  //padding: 30px 10px;
-  //font-size: 16px;
-
-  //border: 1px solid rgba(255, 255, 255, .5);
-  //background: rgba(255, 255, 255, .3);
-  //box-shadow: 0px 0px 4px rgba(0,0,0, .3);
-  //text-align: center;
-}
-
-.h1{
-  //margin: 0;
 }
