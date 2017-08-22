@@ -1,0 +1,74 @@
+@import '~bourbon/app/assets/stylesheets/_bourbon';
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Delius');
+
+$noteWidth: 500px;
+
+body{
+  background: #333333;
+  font-family: 'Delius', cursive;
+  font-size: 16px;
+}
+
+.note{
+  background-color: #f7f7f7;
+  color: #333333;
+  text-align: center;
+
+  padding: 15px;
+
+  a{color: #000}
+
+  &--main{
+    width: $noteWidth;
+    height: 540px;
+    margin-bottom: 10px;
+    margin: auto;
+    background: url('./assets/images/note_paper_bg_rotate4.png') no-repeat top center;
+    padding-top: 160px;
+
+    .content{
+      transform: rotate(-3deg);
+    }
+  }
+
+  &--recruiters{
+    position: absolute;
+    width: 220px;
+    background: url('./assets/images/postit-2-alternative.png') no-repeat top left;
+    top: 460px;
+    left: 0;
+    height: 220px;
+    text-align: left;
+    padding: 40px 60px;
+  }
+  &--friends{
+    width: $noteWidth;
+  }
+
+
+
+
+  //@include background-image(linear-gradient(top, rgba(68,68,68,1) 0%,rgba(85,85,85,1) 27%,rgba(85,85,85,1) 100%));
+}
+
+body, a{
+  //color: #173a61;
+}
+
+.main{
+  //max-width: 400px;
+  //margin: auto;
+  //padding: 30px 10px;
+  //font-size: 16px;
+
+  //border: 1px solid rgba(255, 255, 255, .5);
+  //background: rgba(255, 255, 255, .3);
+  //box-shadow: 0px 0px 4px rgba(0,0,0, .3);
+  //text-align: center;
+}
+
+.h1{
+  //margin: 0;
+}

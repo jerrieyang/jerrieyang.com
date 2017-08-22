@@ -1,0 +1,38 @@
+//#LongWalks { width: 100%; }
+.wrapper-selection {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.selections{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  a {
+    display: inline-block;
+    padding: 20px;
+    font-size: 1.4rem;
+  }
+}
+
+.background {
+  position: absolute;
+  left: 120px;
+  z-index: 0;
+  width: 280px;
+
+  &.One { stroke-dasharray: 510; animation: longwrite1 2.6s linear; }
+  &.Two {  stroke-dasharray: 600;  animation: longwrite2 2.6s linear; }
+}
+
+
+@keyframes longwrite1 {
+  0% { opacity: 0; stroke-dasharray: 60 500; }
+  0.1%{ opacity: 1; }
+  20% { stroke-dasharray: 500 60; }
+}
+@keyframes longwrite2 {
+  0%{ opacity: 0; stroke-dasharray: 30 600; }
+  0.1% { opacity: 1; }
+  20% {	stroke-dasharray: 600 30; }
+}

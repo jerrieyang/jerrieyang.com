@@ -1,2 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>Welcome to my website!</h1>
+<div class="main">
+  <div class="note note--main">
+    <div class="content">
+    <h1 class="h1">Welcome</h1>
+
+    <h4>Thanks for visiting, <br />
+      I am too busy to take care of this place. <br />
+      One day, one day I will bring it to live.
+    </h4>
+    <h3>In the meantime, if you are a</h3>
+    <div class="wrapper-selection">
+      <div class="selections">
+        <a href="javascript:;" (click)="view='recruiters'">recruiter</a>
+        or
+        <a href="javascript:;" (click)="view='friends'">friend</a>
+      </div>
+
+
+      <svg class="background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 100" preserveAspectRatio="xMidYMid meet" >
+        <path *ngIf="view==='friends'" class="background One" d="M305.6372566971124,91.42157146977442c55.82345613690882,-19.27925860777661,66.09901604364228,-29.501292147306202,65.93135878619029,-49.50980803545782s-34.54287837244692,-25.302693509193027,-55.882346957337575,-28.921567711175655s-71.32571577749493,-6.122741040798129,-97.3039119944853,2.450980691348816s-30.49373627470837,25.18507745500817,-29.1666645723231,35.53921738792867s13.407871639342432,27.950101067709355,37.990196377623306,32.10784433402267s54.76161887561733,1.7983728697906969,68.1372572954964,0.9803878185795725s72.75201246333444,-11.502942787771332,83.57843376608446,-17.40195734360637" stroke="black" id="e10_curveS3" style="fill: none; stroke-width: 4px;"/>
+        <path *ngIf="view==='recruiters'" class="background Two" d="M131.86274689319086,11.27450972912358c-43.12559973476829,-2.4368360353295735,-77.32047658693129,1.303078310640732,-100.98039432600432,13.970588871076998s-23.813767389089723,17.473995619454676,-26.470587945451925,24.50980328578575s0.9328927323270788,25.95441172506807,18.872549309450037,32.84313553454831s27.075607357540825,7.9679482035913765,39.70588341881248,9.068630293303784s63.27977192107216,1.063590508039482,84.06862947052596,-8.33333767161642s29.080743294728904,-23.450669059591434,26.22548660577513,-34.80391872630403s-10.473789851779998,-22.329254137704453,-31.127445295745247,-28.4313725490196s-87.44324821426292,-14.695988120130778,-94.36275115667604,-11.02941140941546" stroke="black" id="e12_curveS3" style="fill: none; stroke-width: 4px;"/>
+      </svg>
+
+    </div>
+
+    - Jerrie Yang -
+
+    </div>
+  </div>
+
+  <div class="note note--friends" *ngIf="view==='friends'" [@fadeIn]><app-friends></app-friends></div>
+  <div class="note note--recruiters" *ngIf="view==='recruiters'" [@fadeIn]><app-recruiters></app-recruiters></div>
+</div>
