@@ -7,7 +7,7 @@ import { fadeIn, fadeSlideIn } from './animations/animations';
   styleUrls: ['./app.component.scss'],
   animations: [ fadeIn, fadeSlideIn ]
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements AfterViewInit {
   title = 'app';
   isLoaded: boolean;
   view: string;
