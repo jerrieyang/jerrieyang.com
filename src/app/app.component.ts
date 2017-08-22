@@ -9,11 +9,11 @@ import { fadeIn, fadeSlideIn } from './animations/animations';
 })
 export class AppComponent implements AfterViewInit {
   title = 'app';
-  isLoaded: boolean;
+  isLoaded: Boolean = false;
   view: string;
 
   constructor() {
-    this.isLoaded = false;
+
   }
 
   ngAfterViewInit() {
