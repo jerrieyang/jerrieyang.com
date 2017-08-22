@@ -1,5 +1,6 @@
 @import '~bourbon/app/assets/stylesheets/_bourbon';
 @import 'mixins';
+@import 'font';
 
 @import url('https://fonts.googleapis.com/css?family=Delius');
 
@@ -11,6 +12,7 @@ body{
   font-family: 'Delius', cursive;
   font-size: 16px;
   background-color: rgba(25,25,25,1);
+  text-shadow: 0px 0px 3px rgba(0,0,0,.2);
   @include background-image(linear-gradient(top, rgba(102,102,102,1) 0%, rgba(25,25,25,1) 100%));
 }
 
@@ -24,6 +26,28 @@ body{
 
   a{color: #000}
 
+  .icon-wrapper{
+    text-align: center;
+    margin-top: 10px;
+    a.link-icon{
+      text-decoration: none;
+      font-size: 3rem;
+      display: inline-block;
+      padding: 16px;
+      color: #000;
+      opacity: .6;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
+
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+
   &--main{
     width: $noteWidth;
     height: 540px;
@@ -35,18 +59,53 @@ body{
     .content{
       transform: rotate(-3deg);
     }
+
+    .wrapper-selection {
+      position: relative;
+      width: 300px;
+      margin: auto;
+      height: 100px;
+
+      .selections {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        a {
+          display: inline-block;
+          padding: 20px;
+          font-size: 1.4rem;
+        }
+
+        .background {
+          position: absolute;
+          left: 100px;
+          z-index: 0;
+          width: 300px;
+
+          &.One {
+            stroke-dasharray: 510;
+            animation: longwrite1 2.6s linear;
+          }
+          &.Two {
+            stroke-dasharray: 600;
+            animation: longwrite2 2.6s linear;
+          }
+        }
+
+      }
+    }
   }
 
   &--recruiters{
     position: absolute;
-    width: 280px;
+    width: 260px;
     background: url('./assets/images/sticky-note.png') no-repeat top left;
     top: 470px;
     left: 50%;
     height: 280px;
     text-align: left;
-    padding: 40px 30px;
-
+    padding: 40px;
+    transform: rotate(10deg);
     .content{
       transform: rotate(-8deg);
     }
@@ -54,11 +113,44 @@ body{
 
 
   &--friends{
-    width: 960px;
-    height: 600px;
-    margin: -260px auto 0;
-    background: url('./assets/images/blank-photo-frames-2023679_960_720.png') no-repeat top left;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 470px;
+    left: 30%;
+    transform: rotate(5deg);
+    background: url('./assets/images/polaroidframe-white_thumb4.png') no-repeat top left;
+
+    .content{
+      position: absolute;
+      bottom: 10px;
+      right: 80px;
+      .link-icon{
+        vertical-align: -webkit-baseline-middle;
+      }
+    }
+    img{
+      clip: rect(40px, 204px, 243px, 0px);
+      width: 204px;
+      left: 27px;
+      position: absolute;
+      top: -7px;
+    }
   }
 
 
 }
+
+
+
+@keyframes longwrite1 {
+  0% { opacity: 0; stroke-dasharray: 60 500; }
+  0.1%{ opacity: 1; }
+  20% { stroke-dasharray: 500 60; }
+}
+@keyframes longwrite2 {
+  0%{ opacity: 0; stroke-dasharray: 30 600; }
+  0.1% { opacity: 1; }
+  20% {	stroke-dasharray: 600 30; }
+}
+

@@ -9,7 +9,6 @@ export class RecruitersComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
