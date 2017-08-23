@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Delius');
 
+
+
 $noteWidth: 500px;
 html, body{
   min-height: 100%;
@@ -76,21 +78,7 @@ body{
           font-size: 1.4rem;
         }
 
-        .background {
-          position: absolute;
-          left: 100px;
-          z-index: 0;
-          width: 300px;
 
-          &.One {
-            stroke-dasharray: 510;
-            animation: longwrite1 2.6s linear;
-          }
-          &.Two {
-            stroke-dasharray: 600;
-            animation: longwrite2 2.6s linear;
-          }
-        }
 
       }
     }
@@ -141,8 +129,6 @@ body{
 
 }
 
-
-
 @keyframes longwrite1 {
   0% { opacity: 0; stroke-dasharray: 60 500; }
   0.1%{ opacity: 1; }
@@ -153,4 +139,22 @@ body{
   0.1% { opacity: 1; }
   20% {	stroke-dasharray: 600 30; }
 }
+
+
+.background {
+  position: absolute;
+  left: 0px;
+  z-index: 0;
+  width: 300px;
+
+  &.One {
+    stroke-dasharray: 510;
+    animation: longwrite1 2.6s linear;
+  }
+  &.Two {
+    stroke-dasharray: 600;
+    animation: longwrite2 2.6s linear;
+  }
+}
+
 
